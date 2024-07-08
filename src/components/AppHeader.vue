@@ -24,7 +24,8 @@ export default {
                 { 
                     label: 'TV', 
                     url: '#',
-                    active: false },
+                    active: false 
+                },
                 {  
                     label: 'GAMES', 
                     url: '#',
@@ -43,17 +44,17 @@ export default {
                 { 
                     label: 'FANS', 
                     url: '#',
-                    tive: false 
+                    active: false 
                 },
                 { 
                     label: 'NEWS', 
                     url: '#',
-                    tive: false 
+                    active: false 
                 },
                 { 
                     label: 'SHOP', 
                     url: '#',
-                    tive: false 
+                    active: false 
                 },
             ],
         };
@@ -67,19 +68,38 @@ export default {
         <img src="..//assets/img/dc-logo.png" alt="logo DC Header">
         <ul>
             <li v-for="(item, index) in menuItems" :key="index" @click="toggleActive(index)">
-                {{ item.label }}
+                <a>{{ item.label }}</a>
             </li>
         </ul>
     </div>
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/mixins' as * ;
+@use '../styles/partials/variables' as * ;
 
-ul {
+.container {
     @include center(orizzontal);
+    justify-content: space-between;
+    padding: 2em;
 
-    li {
-    list-style: none;
-}
+    ul {
+        @include center(orizzontal);
+        gap: 20px;
+
+        li {
+            list-style: none;
+
+            &:active {
+                padding: 1em 0;
+                border-bottom: 3px solid $prymary;
+            }
+
+            a {
+                font-weight: 700;
+                font-size: 14px;
+            }
+        }
+    }
 }
 </style>
