@@ -5,6 +5,7 @@ import AppSeries from './components/AppSeries.vue';
 import AppFooter from './components/AppFooter.vue';
 
 export default {
+  name: 'App',
   components: {
     AppHeader,
     AppHero,
