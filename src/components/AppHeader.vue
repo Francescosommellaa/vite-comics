@@ -81,25 +81,36 @@ export default {
 .container {
     @include center(orizzontal);
     justify-content: space-between;
-    padding: 2em;
 
     ul {
         @include center(orizzontal);
-        gap: 20px;
+        height: 100px;
 
         li {
             list-style: none;
+            height: 100%;
 
             &:active {
                 padding: 1em 0;
                 border-bottom: 3px solid $prymary;
             }
+            &:hover {
+                background-color: #f2f2f2;
+            }
 
             a {
+                @include center();
                 font-weight: 700;
                 font-size: 14px;
+                height: 100%;
+                padding: 0 1em;
             }
         }
+    }
+
+    img {
+        margin: 2em 0.5em;
+        height: 88px;
     }
 }
 </style>
