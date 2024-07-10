@@ -28,7 +28,7 @@ export default {
                 },
             ],
 
-            DcComicsItems: [
+            dcComicsItems: [
                 {
                     link: 'characters'
                     
@@ -51,9 +51,83 @@ export default {
                 {
                     link: 'characters'
                 },
+            ],
+
+            shopItems: [
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+            ],
+
+            dcItems: [
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                },
+            ],
+
+            sitesItem: [
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
+                {
+                    link: 'characters'
+                    
+                },
+                {
+                    link: 'characters'
+                },
             ]
         }
-
     }
 }
 
@@ -73,13 +147,13 @@ export default {
         <div class="link-utili">
             <div>
                 <h3>DC COMICS</h3>
-                <ul v-for="(item, index) in DcComicsItems">
+                <ul v-for="(item, index) in dcComicsItems">
                     <li>
                         <a href="#">{{ item.link }}</a>
                     </li>
                 </ul>
                 <h3>SHOP</h3>
-                <ul v-for="(item, index) in DcComicsItems">
+                <ul v-for="(item, index) in shopItems">
                     <li>
                         <a href="#">{{ item.link }}</a>
                     </li>
@@ -88,7 +162,7 @@ export default {
 
             <div>
                 <h3>DC</h3>
-                <ul v-for="(item, index) in DcComicsItems">
+                <ul v-for="(item, index) in dcItems">
                     <li>
                         <a href="#">{{ item.link }}</a>
                     </li>
@@ -96,8 +170,8 @@ export default {
             </div>
 
             <div>
-                <h3>DC</h3>
-                <ul v-for="(item, index) in DcComicsItems">
+                <h3>SITES</h3>
+                <ul v-for="(item, index) in sitesItem">
                     <li>
                         <a href="#">{{ item.link }}</a>
                     </li>
@@ -148,10 +222,16 @@ export default {
 
     .link-utili {
         @include center(orizzontal);
+        align-items: start ;
+        gap: 20px;
+
+        h3 {
+            margin-top: 20px;
+        }
 
         li {
             list-style: none;
-            
+
             a {
                 color: white;
                 text-decoration: none
