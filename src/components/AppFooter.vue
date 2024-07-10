@@ -39,7 +39,7 @@ export default {
         <ul class="">
             <li v-for="(item, index) in topFooteritems">
                 <img :src="(item.img)" alt="Immagine" />
-                <h4>{{ item.title }}</h4>
+                <h5>{{ item.title }}</h5>
             </li>
         </ul>
     </div>
@@ -53,7 +53,7 @@ export default {
     @include center(vertical);
     height: 100px;
     background-color: #0582F9;
-    color: white;
+    color: rgba(255, 255, 255, 0.692);
 
     ul {
     @include center();
